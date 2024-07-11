@@ -1,0 +1,14 @@
+.botao {
+    background-color: transparent;
+    color: var(--cor-fonte);
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .6rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}

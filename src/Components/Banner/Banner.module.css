@@ -1,0 +1,37 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    padding: 0 40px;
+    background-blend-mode: multiply;
+    background-color: #020c20c9;
+    background-size: cover;
+    box-shadow: inset 0px 20px 27px -26px var(--cor-bordas);
+    margin-bottom: 2%;
+    gap: 4rem;
+}
+
+.infoVideo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.titulo, .texto {
+    color: var(--cor-fonte);
+}
+
+.videoBanner {
+    display: flex;
+    height: 330px;
+    justify-content: start;
+    border: 3px solid var(--cor-bordas);
+    padding: 3px;
+    width: 35%;
+    box-shadow: inset 0px 0px 7px 2px var(--cor-bordas);
+}
+
+iframe, .videoBanner {
+    border-radius: 10px;
+}

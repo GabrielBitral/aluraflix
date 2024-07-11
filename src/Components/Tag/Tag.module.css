@@ -1,0 +1,22 @@
+.front, .back, .mobile {
+    padding: 20px;
+    width: 295px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    border-radius: 10px;
+}
+
+.front {
+    background-color: var(--cor-tag-front);
+}
+
+.back {
+    background-color: var(--cor-tag-back);
+}
+
+.mobile {
+    background-color: var(--cor-tag-mobile);
+}
