@@ -1,0 +1,12 @@
+.corClara, .corEscura {
+    font-size: 3.75rem;
+    text-align: center;
+}
+
+.corClara {
+    color: var(--cor-fonte);
+}
+
+.corEscura {
+    color: var(--cor-bordas);
+}

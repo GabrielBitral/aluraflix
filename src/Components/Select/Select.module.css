@@ -1,0 +1,23 @@
+.selectLabelContainer {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.select {
+    padding: 2%;
+    background-color: transparent;
+    color: var(--cor-fonte);
+    border-radius: 10px;
+    border: 2px solid var(--cor-fonte);
+    resize: none;
+}
+
+.bordaAzul {
+    border: 2px solid var(--cor-bordas);
+}
+
+.label {
+    color: var(--cor-fonte);
+    padding-left: .3rem;
+}

@@ -1,12 +1,11 @@
-import { createContext, useEffect, useReducer, useState } from "react";
-import { videosReducer, SET_VIDEOS } from "../reducers/VideosReducer";
+import { createContext, useEffect, useState } from "react";
 
 export const VideoContext = createContext();
 VideoContext.displayName = "Video";
 const estadoInicial = [];
 
 export const VideosProvider = ({children}) => {
-    const [videos, setVideos] = useState([]);
+    const [videos, setVideos] = useState(estadoInicial);
     const [videoUpdate, setVideoUpdate] = useState(null);
 
     useEffect(() => {

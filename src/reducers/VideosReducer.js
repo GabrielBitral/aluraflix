@@ -2,8 +2,6 @@ export const ADD_VIDEO = "ADD_VIDEO";
 export const REMOVE_VIDEO = "REMOVE_VIDEO";
 export const UPDATE_VIDEO = "UPDATE_VIDEO";
 
-
-
 export const videosReducer = async (estado, acao) => {
     switch (acao.type) {
         case ADD_VIDEO:

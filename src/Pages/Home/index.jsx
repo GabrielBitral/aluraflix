@@ -5,7 +5,7 @@ import Dialogo from '../../Components/Dialogo';
 import { useVideoContext } from '../../hooks/useVideoContext';
 
 const Home = () => {
-    const { videos, videoUpdate } = useVideoContext();
+    const { videos, videoUpdate, setVideoUpdate } = useVideoContext();
     
     return (
         <>
@@ -13,7 +13,9 @@ const Home = () => {
             <section className={styles.categorias}>
                 <Categorias />
             </section>
-            <Dialogo video={videoUpdate} />
+            {videoUpdate &&
+                <Dialogo video={videoUpdate} aoFechar={() => setVideoUpdate(null)}/>
+            }
         </>
     );
 };

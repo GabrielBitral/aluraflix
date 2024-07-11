@@ -8,18 +8,46 @@
 }
 
 dialog {
-    position: absolute;
-    top: 294px;
-    background: transparent;
-    padding: 0;
-    border: 0;
-    width: 1156px;
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 10%;
+    background: var(--cor-header);
+    border: 2px solid var(--cor-bordas);
+    border-radius: 10px;
+    width: 35%;
+    padding: 30px 40px;
+    margin: auto;
 }
 
-dialog form button {
-    position: relative;
-    top: 20px;
-    right: 60px;
+.containerDialogo {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-header);
+    width: 100%;
+}
+
+.fechar {
+    display: flex;
+    justify-content: end;
+}
+
+.fechar button {
+    margin: 0;
+    padding: 5px;
+    border: 2px solid var(--cor-fonte);
+    border-radius: 50%;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    padding: 2%;
+    gap: 1rem;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
 }
