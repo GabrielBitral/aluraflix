@@ -12,23 +12,30 @@ const Categorias = () => {
 
     return (
         <>
+            {/* <div className={styles.divider}></div> */}
             <section className={styles.categoria}>
                 <Tag texto="LOL" estilo={'lol'} />
-                {videosLOL.map((video) =>
-                    <Card tag={'lol'} video={video} key={video.id} />
-                )}
+                <div className={styles.cards}>
+                    {videosLOL.map((video) =>
+                        <Card tag={'lol'} video={video} key={video.id} />
+                    )}
+                </div>
             </section>
             <section className={styles.categoria}>
                 <Tag texto="GENSHIN" estilo={'genshin'} />
-                {videosGenshin.map((video) =>
-                    <Card tag={'genshin'} video={video} key={video.id} />
-                )}
+                <div className={styles.cards}>
+                    {videosGenshin.map((video) =>
+                        <Card tag={'genshin'} video={video} key={video.id} />
+                    )}
+                </div>
             </section>
             <section className={styles.categoria}>
                 <Tag texto="HONKAI S. R." estilo={'honkai'} />
-                {videosHonkai.map((video) =>
-                    <Card tag={'honkai'} video={video} key={video.id} />
-                )}
+                <div className={styles.cards}>
+                    {videosHonkai.map((video) =>
+                        <Card tag={'honkai'} video={video} key={video.id} />
+                    )}
+                </div>
             </section>
         </>
     );

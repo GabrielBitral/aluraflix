@@ -2,10 +2,11 @@ import Botao from '../Botao';
 import styles from './Card.module.css';
 import remover from './remover.png';
 import editar from './editar.png';
-import { useVideoContext } from '../../hooks/useVideoContext';
+import { VideoContext } from '@/Contexts/VideoContext';
+import { useContext } from 'react';
 
 const Card = ({ tag, video }) => {
-    const { alterarVideo, setVideoUpdate } = useVideoContext();
+    const { setVideoUpdate, setVideoRemover } = useContext(VideoContext);
 
     return (
         <div className={`${styles.card} ${tag === 'lol' ? styles.lol : tag === 'genshin' ? styles.genshin : styles.honkai}`}>
@@ -21,8 +22,9 @@ const Card = ({ tag, video }) => {
                     allowFullScreen
                 ></iframe>
                 <div className={`${styles.botoes} ${tag === 'lol' ? styles.lol : tag === 'genshin' ? styles.genshin : styles.honkai}`}>
-                    <Botao><img src={remover} alt='Remover Vídeo' className={styles.icones} />DELETAR</Botao>
+                    <p className={styles.titulo}>{video.titulo}</p>
                     <Botao handleClick={() => setVideoUpdate(video)}><img src={editar} alt='Editar Vídeo' className={styles.icones} />EDITAR</Botao>
+                    <Botao handleClick={() => setVideoRemover(video)}><img src={remover} alt='Remover Vídeo' className={styles.icones} />DELETAR</Botao>
                 </div>
         </div>
     );

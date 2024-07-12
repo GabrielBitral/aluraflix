@@ -1,28 +1,51 @@
 import { useContext } from "react";
 import { VideoContext } from '@/Contexts/VideoContext';
+import { linkApi } from "../Contexts/VideoContext";
 
 export const useVideoContext = () => {
-    const { videos, setVideos, videoUpdate, setVideoUpdate, categorias } = useContext(VideoContext);
+    const { videos, setVideos } = useContext(VideoContext);
 
-    function adicionarVideo(novoVideo) {
-        
+    async function adicionarVideo(novoVideo) {
+        fetch(linkApi, {
+            method: 'POST',
+            headers: { 'Content-type': 'application/json' },
+            body: JSON.stringify({
+                ...novoVideo
+            }),
+        })
+        .then(() => {
+            setVideos([...videos])
+        })
+        .catch(() => {
+            alert("Nâo foi possível cadastrar o vídeo.");
+        });
     }
 
-    function removerVideo(id) {
-       
+    async function removerVideo(id) {
+        fetch(`${linkApi}/${id}`, {
+            method: 'DELETE',
+            headers: { 'Content-type': 'application/json' },
+        }).catch(() => {
+            alert("Nâo foi possível remover o vídeo.");
+        });
     }
 
     function alterarVideo(videoId, videoAlterar) {
-        
+        fetch(`${linkApi}/${videoId}`, {
+            method: 'PATCH',
+            headers: { 'Content-type': 'application/json' },
+            body: JSON.stringify({
+                ...videoAlterar
+            }),
+        }).catch(() => {
+            alert("Nâo foi possível editar o vídeo.");
+        });
     }
 
     return {
         videos,
-        videoUpdate,
         adicionarVideo,
         removerVideo,
         alterarVideo,
-        setVideoUpdate,
-        categorias
     };
 };

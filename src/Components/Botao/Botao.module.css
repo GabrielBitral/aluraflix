@@ -11,6 +11,10 @@
     align-items: center;
     gap: 4px;
     cursor: pointer;
+    &:hover {
+        background-color: var(--cor-principal);
+        box-shadow: inset 0px 20px 27px -26px var(--cor-bordas);
+    }
 }
 
 .bordaAzul {

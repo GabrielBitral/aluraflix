@@ -1,12 +1,15 @@
 import { createContext, useEffect, useState } from "react";
 
+export const linkApi = 'https://aluraflix-api-gb.vercel.app/videos';
 export const VideoContext = createContext();
 VideoContext.displayName = "Video";
 const estadoInicial = [];
 
-export const VideosProvider = ({children}) => {
+export const VideosProvider = ({ children }) => {
     const [videos, setVideos] = useState(estadoInicial);
     const [videoUpdate, setVideoUpdate] = useState(null);
+    const [videoRemover, setVideoRemover] = useState(null);
+
     const categorias = [
         {
             valor: 'lol',
@@ -22,16 +25,12 @@ export const VideosProvider = ({children}) => {
         },
     ];
 
-    useEffect(() => {
-        fetch('https://my-json-server.typicode.com/GabrielBitral/aluraflix-api/videos')
-            .then(resposta => resposta.json())
-            .then(dados => {
-                setVideos(dados);
-            });
-    }, [])
-
     return (
-        <VideoContext.Provider value={{videos, setVideos, videoUpdate, setVideoUpdate, categorias}}>
+        <VideoContext.Provider
+            value={
+                { videos, setVideos, videoUpdate, setVideoUpdate, videoRemover, setVideoRemover, categorias }
+            }
+        >
             {children}
         </VideoContext.Provider>
     )

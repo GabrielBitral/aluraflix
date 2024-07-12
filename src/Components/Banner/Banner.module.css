@@ -7,7 +7,9 @@
     background-blend-mode: multiply;
     background-color: #020c20c9;
     background-size: cover;
-    box-shadow: inset 0px 20px 27px -26px var(--cor-bordas);
+    box-shadow: inset 0px 20px 27px -26px var(--cor-bordas),
+        0px 20px 27px -26px var(--cor-bordas);
+    border-bottom: 2px solid var(--cor-bordas);
     margin-bottom: 2%;
     gap: 4rem;
 }
@@ -16,9 +18,11 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: 30%;
 }
 
-.titulo, .texto {
+.titulo,
+.texto {
     color: var(--cor-fonte);
 }
 
@@ -32,6 +36,7 @@
     box-shadow: inset 0px 0px 7px 2px var(--cor-bordas);
 }
 
-iframe, .videoBanner {
+iframe,
+.videoBanner {
     border-radius: 10px;
 }

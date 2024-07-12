@@ -5,3 +5,17 @@
     padding: 0 40px;
     flex-wrap: wrap;
 }
+
+.cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.divider {
+    height: 4dvh;
+    background-color: var(--cor-header);
+    width: 100%;
+    box-shadow: inset 0px 20px 27px -26px var(--cor-bordas);
+}

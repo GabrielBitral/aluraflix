@@ -5,10 +5,13 @@ import Campo from '@/Components/Campo';
 import Select from '@/Components/Select';
 import TextArea from '@/Components/TextArea';
 import { useVideoContext } from '@/hooks/useVideoContext';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { VideoContext } from '../../Contexts/VideoContext';
 
 const NovoVideo = () => {
-    const { categorias } = useVideoContext();
+    const { categorias } = useContext(VideoContext);
+    const { adicionarVideo } = useVideoContext();
+
     const [titulo, setTitulo] = useState('');
     const [imagem, setImagem] = useState('');
     const [link, setLink] = useState('');
@@ -17,7 +20,7 @@ const NovoVideo = () => {
 
     const aoSalvarVideo = (evento) => {
         evento.preventDefault();
-        console.log(evento.target.value);
+        adicionarVideo({titulo, imagem, link, categoria, descricao});
     };
 
     const limparCampos = (evento) => {

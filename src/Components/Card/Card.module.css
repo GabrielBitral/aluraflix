@@ -1,7 +1,7 @@
 .card {
     display: flex;
     flex-direction: column;
-    width: 24%;
+    width: 23%;
     height: 350px;
     border-radius: 10px;
 }
@@ -10,11 +10,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     border-radius: 0px 0px 7px 7px;
-    gap: 2rem;
-    cursor: pointer;
     padding: .4rem;
     background-color: #000000;
+}
+
+.titulo {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3%;
 }
 
 iframe {
@@ -22,17 +28,20 @@ iframe {
 }
 
 .lol {
+    color: var(--cor-tag-lol);
     border: 3px solid var(--cor-tag-lol);
 }
 
 .genshin {
+    color: var(--cor-tag-genshin);
     border: 3px solid var(--cor-tag-genshin);
 }
 
 .honkai {
+    color: var(--cor-tag-honkai);
     border: 3px solid var(--cor-tag-honkai);
 }
 
 .icones {
-    width: 32px;
+    width: 28px;
 }

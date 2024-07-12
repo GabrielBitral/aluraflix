@@ -44,11 +44,15 @@ dialog {
     flex-direction: column;
     margin-top: 2%;
     padding: 2%;
-    gap: 1rem;
+    gap: 3rem;
+}
+
+.subtitulo {
+    color: var(--cor-fonte);
+    text-align: center;
 }
 
 .botoes {
     display: flex;
-    justify-content: space-between;
-    margin-top: 2%;
+    justify-content: center;
 }
