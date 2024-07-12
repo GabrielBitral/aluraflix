@@ -21,14 +21,18 @@ iframe {
     border-radius: 5px 5px 0px 0px;
 }
 
-.back {
-    border: 3px solid var(--cor-tag-back);
+.lol {
+    border: 3px solid var(--cor-tag-lol);
 }
 
-.front {
-    border: 3px solid var(--cor-tag-front);
+.genshin {
+    border: 3px solid var(--cor-tag-genshin);
 }
 
-.mobile {
-    border: 3px solid var(--cor-tag-mobile);
+.honkai {
+    border: 3px solid var(--cor-tag-honkai);
+}
+
+.icones {
+    width: 32px;
 }

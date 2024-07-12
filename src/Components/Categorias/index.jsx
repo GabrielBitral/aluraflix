@@ -13,21 +13,21 @@ const Categorias = () => {
     return (
         <>
             <section className={styles.categoria}>
-                <Tag texto="LOL" estilo={'front'} />
+                <Tag texto="LOL" estilo={'lol'} />
                 {videosLOL.map((video) =>
-                    <Card tag={'front'} video={video} key={video.id} />
+                    <Card tag={'lol'} video={video} key={video.id} />
                 )}
             </section>
             <section className={styles.categoria}>
-                <Tag texto="GENSHIN" estilo={'back'} />
+                <Tag texto="GENSHIN" estilo={'genshin'} />
                 {videosGenshin.map((video) =>
-                    <Card tag={'back'} video={video} key={video.id} />
+                    <Card tag={'genshin'} video={video} key={video.id} />
                 )}
             </section>
             <section className={styles.categoria}>
-                <Tag texto="HONKAI S. R." estilo={'mobile'} />
+                <Tag texto="HONKAI S. R." estilo={'honkai'} />
                 {videosHonkai.map((video) =>
-                    <Card tag={'mobile'} video={video} key={video.id} />
+                    <Card tag={'honkai'} video={video} key={video.id} />
                 )}
             </section>
         </>

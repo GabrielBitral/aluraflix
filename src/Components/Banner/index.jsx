@@ -18,8 +18,8 @@ const Banner = () => {
         <>
             {temVideo ? <section className={styles.banner} style={{ backgroundImage: `url(${videoDestaque.imagem})` }}>
                 <div className={styles.infoVideo}>
-                    <Tag texto="GENSHIN" estilo="back" />
-                    <h1 className={styles.titulo}>A digníssima "Arconte Hydro" Furina!</h1>
+                    <Tag texto="GENSHIN" estilo="genshin" />
+                    <h1 className={styles.titulo}>{videoDestaque.titulo}</h1>
                     <p className={styles.texto}>{videoDestaque.descricao}</p>
                 </div>
                 <div className={styles.videoBanner}>
@@ -35,7 +35,7 @@ const Banner = () => {
                     ></iframe>
                 </div>
             </section>
-                : ''}
+                : <section className={styles.banner}/>}
         </>
     );
 };

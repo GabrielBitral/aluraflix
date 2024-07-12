@@ -3,9 +3,9 @@ import styles from './Tag.module.css';
 const Tag = ({ texto, estilo }) => {
     return (
         <span className={
-            estilo === 'back' ? styles.back :
-                estilo === 'front' ? styles.front :
-                    styles.mobile
+            estilo === 'lol' ? styles.lol :
+                estilo === 'genshin' ? styles.genshin :
+                    styles.honkai
         }
         >
             {texto}

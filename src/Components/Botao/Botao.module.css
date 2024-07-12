@@ -1,14 +1,22 @@
-.botao {
+.botao, .bordaAzul, .bordaBranca {
     background-color: transparent;
     color: var(--cor-fonte);
     border: none;
     font-size: 1rem;
     font-weight: bold;
-    padding: .6rem 1rem;
+    padding: .6rem 1.6rem;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4px;
     cursor: pointer;
+}
+
+.bordaAzul {
+    border: 3px solid var(--cor-bordas);
+}
+
+.bordaBranca {
+    border: 3px solid var(--cor-fonte);
 }

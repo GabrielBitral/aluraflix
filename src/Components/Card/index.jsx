@@ -8,9 +8,9 @@ const Card = ({ tag, video }) => {
     const { alterarVideo, setVideoUpdate } = useVideoContext();
 
     return (
-        <div className={`${styles.card} ${tag === 'back' ? styles.back : tag === 'front' ? styles.front : styles.mobile}`}>
+        <div className={`${styles.card} ${tag === 'lol' ? styles.lol : tag === 'genshin' ? styles.genshin : styles.honkai}`}>
             <iframe
-                    className={tag === 'back' ? styles.back : tag === 'front' ? styles.front : styles.mobile}
+                    className={tag === 'lol' ? styles.lol : tag === 'genshin' ? styles.genshin : styles.honkai}
                     width="100%"
                     height="100%"
                     src={video.link}
@@ -20,9 +20,9 @@ const Card = ({ tag, video }) => {
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                 ></iframe>
-                <div className={`${styles.botoes} ${tag === 'back' ? styles.back : tag === 'front' ? styles.front : styles.mobile}`}>
-                    <Botao><img src={remover} alt='Remover Vídeo' />DELETAR</Botao>
-                    <Botao handleClick={() => setVideoUpdate(video)}><img src={editar} alt='Editar Vídeo' />EDITAR</Botao>
+                <div className={`${styles.botoes} ${tag === 'lol' ? styles.lol : tag === 'genshin' ? styles.genshin : styles.honkai}`}>
+                    <Botao><img src={remover} alt='Remover Vídeo' className={styles.icones} />DELETAR</Botao>
+                    <Botao handleClick={() => setVideoUpdate(video)}><img src={editar} alt='Editar Vídeo' className={styles.icones} />EDITAR</Botao>
                 </div>
         </div>
     );

@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     gap: .4rem;
+    width: 100%;
 }
 
 .campo {
-    padding: 2%;
+    padding: 3%;
     background-color: transparent;
     color: var(--cor-fonte);
     border-radius: 10px;

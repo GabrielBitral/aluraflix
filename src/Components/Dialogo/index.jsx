@@ -6,26 +6,15 @@ import styles from './Dialogo.module.css';
 import fechar from './fechar.png';
 import TextArea from '../TextArea';
 import Select from '../Select';
+import { useVideoContext } from '@/hooks/useVideoContext';
 
 const Dialogo = ({ video, aoFechar }) => {
-    const [titulo, setTitulo] = useState('');
+    const [titulo, setTitulo] = useState(video.titulo);
     const [imagem, setImagem] = useState(video.imagem);
     const [link, setLink] = useState(video.link);
+    const [categoria, setCategoria] = useState(video.categoria);
     const [descricao, setDescricao] = useState(video.descricao);
-    const categorias = [
-        {
-            valor: 'lol',
-            texto: 'LOL'
-        }, 
-        {
-            valor: 'genshin',
-            texto: 'GENSHIN'
-        },
-        {
-            valor: 'honkai',
-            texto: 'HONKAI S. R.'
-        },
-    ];
+    const { categorias } = useVideoContext();
 
     const aoSalvarVideo = (evento) => {
         evento.preventDefault();
@@ -38,6 +27,7 @@ const Dialogo = ({ video, aoFechar }) => {
         setImagem('');
         setLink('');
         setDescricao('');
+        setCategoria('');
     };
 
     return (
@@ -55,8 +45,12 @@ const Dialogo = ({ video, aoFechar }) => {
                             <Titulo texto="EDITAR DADOS" cor="escura" />
                             <form method='post' className={styles.formulario}>
                                 <Campo valor={titulo} label="Título" placeholder='Título' corBorda='azul' aoTerDigitado={valor => setTitulo(valor)} />
-                                <Select label="Categoria" corBorda='azul'>
-                                    {categorias.map((categoria) => <option value={categoria.valor} key={categoria.valor}>{categoria.texto}</option>)}
+                                <Select valor={categoria} label="Categoria" corBorda='azul' aoSelecionado={valor => setCategoria(valor)}>
+                                    {categorias.map((categoria) =>
+                                        <option value={categoria.valor} key={categoria.valor}>
+                                            {categoria.texto}
+                                        </option>
+                                    )}
                                 </Select>
                                 <Campo valor={imagem} label="Imagem" placeholder='Imagem' corBorda='azul' aoTerDigitado={valor => setImagem(valor)} />
                                 <Campo valor={link} label="Link" placeholder='Link' corBorda='azul' aoTerDigitado={valor => setLink(valor)} />

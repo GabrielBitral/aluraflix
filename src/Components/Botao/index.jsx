@@ -1,8 +1,13 @@
 import styles from './Botao.module.css';
 
-const Botao = ({ children, handleClick }) => {
+const Botao = ({ children, borda = '', handleClick }) => {
     return (
-        <button className={styles.botao} onClick={handleClick}>{children}</button>
+        <button
+            className={borda === 'azul' ? styles.bordaAzul : borda === 'branca' ? styles.bordaBranca : styles.botao}
+            onClick={handleClick}
+        >
+            {children}
+        </button>
     );
 };
 

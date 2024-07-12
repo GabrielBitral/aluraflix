@@ -7,6 +7,20 @@ const estadoInicial = [];
 export const VideosProvider = ({children}) => {
     const [videos, setVideos] = useState(estadoInicial);
     const [videoUpdate, setVideoUpdate] = useState(null);
+    const categorias = [
+        {
+            valor: 'lol',
+            texto: 'LOL'
+        },
+        {
+            valor: 'genshin',
+            texto: 'GENSHIN'
+        },
+        {
+            valor: 'honkai',
+            texto: 'HONKAI S. R.'
+        },
+    ];
 
     useEffect(() => {
         fetch('https://my-json-server.typicode.com/GabrielBitral/aluraflix-api/videos')
@@ -17,7 +31,7 @@ export const VideosProvider = ({children}) => {
     }, [])
 
     return (
-        <VideoContext.Provider value={{videos, videoUpdate, setVideoUpdate}}>
+        <VideoContext.Provider value={{videos, setVideos, videoUpdate, setVideoUpdate, categorias}}>
             {children}
         </VideoContext.Provider>
     )

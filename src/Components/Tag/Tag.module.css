@@ -1,4 +1,4 @@
-.front, .back, .mobile {
+.genshin, .lol, .honkai {
     padding: 20px;
     width: 295px;
     font-weight: bold;
@@ -9,14 +9,14 @@
     border-radius: 10px;
 }
 
-.front {
-    background-color: var(--cor-tag-front);
+.genshin {
+    background-color: var(--cor-tag-genshin);
 }
 
-.back {
-    background-color: var(--cor-tag-back);
+.lol {
+    background-color: var(--cor-tag-lol);
 }
 
-.mobile {
-    background-color: var(--cor-tag-mobile);
+.honkai {
+    background-color: var(--cor-tag-honkai);
 }

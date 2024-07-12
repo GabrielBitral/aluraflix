@@ -1,0 +1,32 @@
+.container {
+    width: 50%;
+    margin: 0 auto;
+    height: 82dvh;
+    padding: 1%;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    padding: 2%;
+    gap: 1rem;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.subtitulo {
+    text-align: center;
+    color: var(--cor-fonte);
+}
+
+.alinhadoAoLado {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 3rem;
+}
