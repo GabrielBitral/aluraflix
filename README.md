@@ -1,8 +1,28 @@
-# React + Vite
+# AluraFlix - Games
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto React desenvolvido para armazenar vídeos de jogos.
 
-Currently, two official plugins are available:
+## 📑 Conceitos aplicados:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Utilização do Vite + React;
+- Diretivas e binds;
+- Componentização e estruturação de HTML dinâmico;
+- Use Effect, Use Context;
+- SPA;
+- CSS responsivo;
+- Estruturação de pastas;
+- Padrões de commits;
+- Rotas com React Router Dom;
+
+## 🛠 Ferramentas e linguagens:
+
+- JavaScript;
+- HTML;
+- CSS;
+- React + Vite;
+- React Router Dom;
+- VSCode;
+
+## 🖼 Preview:
+
+![image](https://github.com/user-attachments/assets/2e20fee8-1456-4a87-9998-32f9bca18e70)
