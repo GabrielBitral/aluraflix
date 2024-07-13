@@ -24,3 +24,10 @@
 .bordaBranca {
     border: 3px solid var(--cor-fonte);
 }
+
+
+@media (max-width: 375px) {
+    .botao, .bordaAzul, .bordaBranca {
+        font-size: .7rem;
+    }
+}

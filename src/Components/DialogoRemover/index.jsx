@@ -17,7 +17,7 @@ const DialogoRemover = ({ video, aoFechar }) => {
             {video &&
                 <>
                     <div className={styles.overlay} />
-                    <dialog open={!!video} onClose={aoFechar}>
+                    <dialog className={styles.dialogo} open={!!video} onClose={aoFechar}>
                         <div className={styles.containerDialogo}>
                             <form method="dialog" className={styles.fechar}>
                                 <Botao formMethod="dialog">

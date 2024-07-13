@@ -20,3 +20,15 @@
 .honkai {
     background-color: var(--cor-tag-honkai);
 }
+
+@media (max-width: 425px) {
+    .genshin, .lol, .honkai {
+        width: 70%;
+    }
+}
+
+@media (max-width: 375px) {
+    .genshin, .lol, .honkai {
+        width: 75%;
+    }
+}

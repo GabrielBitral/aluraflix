@@ -15,6 +15,7 @@ export const useVideoContext = () => {
         })
         .then(() => {
             setVideos([...videos])
+            alert("Vídeo cadastrado!");
         })
         .catch(() => {
             alert("Nâo foi possível cadastrar o vídeo.");
@@ -25,7 +26,11 @@ export const useVideoContext = () => {
         fetch(`${linkApi}/${id}`, {
             method: 'DELETE',
             headers: { 'Content-type': 'application/json' },
-        }).catch(() => {
+        })
+        .then(() => {
+            alert("Vídeo excluído!");
+        })
+        .catch(() => {
             alert("Nâo foi possível remover o vídeo.");
         });
     }
@@ -37,7 +42,11 @@ export const useVideoContext = () => {
             body: JSON.stringify({
                 ...videoAlterar
             }),
-        }).catch(() => {
+        })
+        .then(() => {
+            alert("Vídeo alterado!");
+        })
+        .catch(() => {
             alert("Nâo foi possível editar o vídeo.");
         });
     }

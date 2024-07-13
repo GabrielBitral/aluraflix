@@ -7,7 +7,7 @@
     left: 0;
 }
 
-dialog {
+.dialogo {
     display: flex;
     justify-content: center;
     position: fixed;
@@ -51,4 +51,17 @@ dialog {
     display: flex;
     justify-content: space-between;
     margin-top: 2%;
+}
+
+@media (max-width: 768px) {
+    .dialogo {
+        width: 75%;
+    }
+}
+
+@media (max-width: 425px) {
+    .dialogo {
+        width: 90%;
+        padding: 20px;
+    }
 }

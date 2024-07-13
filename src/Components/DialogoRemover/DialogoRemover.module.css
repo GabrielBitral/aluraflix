@@ -7,7 +7,7 @@
     left: 0;
 }
 
-dialog {
+.dialogo {
     display: flex;
     justify-content: center;
     position: fixed;
@@ -55,4 +55,10 @@ dialog {
 .botoes {
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 425px) {
+    .dialogo {
+        width: 90%;
+    }
 }

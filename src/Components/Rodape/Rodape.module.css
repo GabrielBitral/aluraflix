@@ -11,3 +11,53 @@
 .logo {
     width: 12%;
 }
+
+.link, .active, .icone {
+    display: none;
+}
+
+@media (max-width: 425px) {
+    .rodape {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        gap: 1rem;
+    }
+    
+    .link, .active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+        color: #dedede;
+    }
+    
+    .icone {
+        display: block;
+        width: 24px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .containerIcones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .active .containerIcones {
+        border: 2px solid var(--cor-bordas);
+        border-radius: 20px;
+        padding: 5px 20px;
+        background-color: #2271d11f;
+    }
+
+    .active .containerIcones span {
+        color: var(--cor-bordas);
+    }
+}

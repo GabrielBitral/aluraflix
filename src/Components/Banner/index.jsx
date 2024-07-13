@@ -1,42 +1,27 @@
-import { useVideoContext } from '@/hooks/useVideoContext';
 import styles from './Banner.module.css';
 import Tag from '@/Components/Tag';
-import { useEffect, useState } from 'react';
 
 const Banner = () => {
-    const { videos } = useVideoContext();
-    const [videoDestaque, setVideoDestaque] = useState([]);
-
-    useEffect(() => {
-        if (videos.length) {
-            setVideoDestaque(videos.filter(video => video.categoria === 'genshin' && video.id === 2)[0]);
-        }
-    }, [videos]);
-
-    const temVideo = videoDestaque.length != 0;
     return (
-        <>
-            {temVideo ? <section className={styles.banner} style={{ backgroundImage: `url(${videoDestaque.imagem})` }}>
-                <div className={styles.infoVideo}>
-                    <Tag texto="GENSHIN" estilo="genshin" />
-                    <h1 className={styles.titulo}>{videoDestaque.titulo}</h1>
-                    <p className={styles.texto}>{videoDestaque.descricao}</p>
-                </div>
-                <div className={styles.videoBanner}>
-                    <iframe
-                        width="100%"
-                        height="100%"
-                        src={videoDestaque.link}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                    ></iframe>
-                </div>
-            </section>
-                : <section className={styles.banner}/>}
-        </>
+        <section className={styles.banner} style={{ backgroundImage: `url(https://fastcdn.hoyoverse.com/content-v2/hk4e/113484/1a0e331a984e482f84433eac47cd5e3b_1217371561545932985.jpg)` }}>
+            <div className={styles.infoVideo}>
+                <Tag texto="GENSHIN" estilo="genshin" />
+                <h1 className={styles.titulo}>Furina, a 'Arconte' da nação Hydro!</h1>
+                <p className={styles.texto}>Demonstração da personagem Furina, em uma atuação magnífica com seus mascotes e amigos!</p>
+            </div>
+            <div className={styles.videoBanner}>
+                <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/EN79SfbcvIE?si=gf8zoy_I-z1MKo0r"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                ></iframe>
+            </div>
+        </section>
     );
 };
 

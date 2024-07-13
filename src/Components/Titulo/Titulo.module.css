@@ -10,3 +10,15 @@
 .corEscura {
     color: var(--cor-bordas);
 }
+
+@media (max-width: 768px) {
+    .corClara, .corEscura {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .corClara, .corEscura {
+        font-size: 2.3rem;
+    }
+}

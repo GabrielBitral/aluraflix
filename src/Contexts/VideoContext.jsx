@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export const linkApi = 'https://aluraflix-api-gb.vercel.app/videos';
 export const VideoContext = createContext();

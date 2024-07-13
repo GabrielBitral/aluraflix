@@ -8,8 +8,12 @@
     border-bottom: 3px solid var(--cor-bordas);
 }
 
+.logoLink {
+    width: 15%;
+}
+
 .logo {
-    width: 35%;
+    width: 100%;
 }
 
 .linkContainer {
@@ -38,4 +42,10 @@
     border-color: var(--cor-bordas);
     color: var(--cor-bordas);
     box-shadow: inset 0px 8px 15px -7px var(--cor-bordas);
+}
+
+@media (max-width: 425px) {
+    .headerContainer {
+        display: none;
+    }
 }

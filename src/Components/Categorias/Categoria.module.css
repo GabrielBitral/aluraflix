@@ -9,13 +9,30 @@
 .cards {
     display: flex;
     gap: 2rem;
-    flex-wrap: wrap;
-    flex-grow: 1;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-color: var(--cor-bordas) transparent;
+    scrollbar-width: thin;
+    padding-bottom: 10px;
 }
 
-.divider {
-    height: 4dvh;
-    background-color: var(--cor-header);
-    width: 100%;
-    box-shadow: inset 0px 20px 27px -26px var(--cor-bordas);
+@media (max-width: 768px) {
+    .categoria {
+        align-items: center;
+    }
+
+    .cards {
+        align-self: start;
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .categoria {
+        padding: 0px 20px;
+    }
+
+    .categoria:nth-child(3) {
+        padding: 0px 20px 70px 20px;
+    }
 }

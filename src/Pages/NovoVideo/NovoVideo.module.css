@@ -1,7 +1,9 @@
 .container {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     margin: 0 auto;
-    height: 82dvh;
+    height: 82.3dvh;
     padding: 1%;
 }
 
@@ -29,4 +31,42 @@
     width: 100%;
     justify-content: space-between;
     gap: 3rem;
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        height: 84.1dvh;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: 84.9dvh;
+        width: 80%;
+    }
+
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        height: 84.9dvh;
+        width: 90%;
+        gap: .8rem;
+    }
+
+    .subtitulo {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .alinhadoAoLado {
+        gap: .8rem;
+        flex-direction: column;
+    }
 }

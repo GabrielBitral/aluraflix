@@ -12,7 +12,6 @@ const Categorias = () => {
 
     return (
         <>
-            {/* <div className={styles.divider}></div> */}
             <section className={styles.categoria}>
                 <Tag texto="LOL" estilo={'lol'} />
                 <div className={styles.cards}>
