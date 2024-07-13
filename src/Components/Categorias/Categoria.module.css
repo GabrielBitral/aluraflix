@@ -35,4 +35,8 @@
     .categoria:nth-child(3) {
         padding: 0px 20px 70px 20px;
     }
+
+    .cards {
+        gap: .8rem;
+    }
 }
